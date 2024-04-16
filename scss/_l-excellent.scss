@@ -1,0 +1,96 @@
+@keyframes rotateForward {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.excellent {
+  display: flex;
+  flex-direction: column;
+  padding-top: 56px;
+
+  &__title {
+    margin: 0 0 6px;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 130%;
+    text-align: center;
+    color: #fff;
+  }
+
+  &__description {
+    margin: 0 0 46px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 130%;
+    text-align: center;
+    color: #fff;
+  }
+
+  &__horoscope {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-outter {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: url(../assets/horo-outter.png) center no-repeat;
+      background-size: contain;
+      animation: rotateForward 60s infinite linear;
+    }
+
+    &-inner {
+      position: absolute;
+      width: 28.1978%;
+      aspect-ratio: 1 / 1;
+      background: url(../assets/horo-inner.png) center no-repeat;
+      background-size: contain;
+      animation: rotateBack 60s infinite linear;
+    }
+  }
+
+  &__buttons {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 14px 48px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    color: #fff;
+    border: none;
+    border-radius: 48px;
+    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.05);
+    transition: transform ease-in-out 0.12s;
+    will-change: transform;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.06);
+    }
+
+    &:active {
+      transform: scale(1);
+    }
+  }
+}
