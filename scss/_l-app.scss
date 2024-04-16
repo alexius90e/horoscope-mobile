@@ -1,0 +1,11 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background: url(../assets/app-bg.jpg) center no-repeat;
+  background-size: cover;
+  background-color: #1f1d2c;
+}

@@ -1,0 +1,62 @@
+.first-screen {
+  display: flex;
+  flex-direction: column;
+
+  &__buttons {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 14px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 17px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #fff;
+    border: none;
+    border-radius: 48px;
+    backdrop-filter: blur(8px);
+    background: rgba(2, 5, 29, 0.5);
+    transition: transform ease-in-out 0.12s;
+    will-change: transform;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.015);
+    }
+
+    &:active {
+      transform: scale(1);
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      height: 24px;
+      width: 24px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    &_compatibility {
+      &::before {
+        background-image: url(../assets/compatibility.svg);
+      }
+    }
+
+    &_horoscope {
+      &::before {
+        background-image: url(../assets/horoscope.svg);
+      }
+    }
+  }
+}

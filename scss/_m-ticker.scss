@@ -1,0 +1,49 @@
+@keyframes marquee1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+.ticker {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  overflow-x: hidden;
+
+  & > span {
+    display: inline-block;
+    padding: 0 4px;
+    font-weight: 500;
+    font-size: 14px;
+    white-space: nowrap;
+    color: #fff;
+  }
+
+  &__span1 {
+    animation: marquee1 20s infinite linear;
+    animation-delay: -20s;
+  }
+
+  &__span2 {
+    animation: marquee2 20s infinite linear;
+    animation-delay: -10s;
+  }
+
+  & > span:after {
+    content: 'Бегущая строка Бегущая строка Бегущая строка ';
+  }
+}

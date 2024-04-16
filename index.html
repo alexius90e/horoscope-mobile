@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horoscope</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script type="module" src="./js/index.js" defer></script>
+  </head>
+
+  <body>
+    <div class="app">
+      <header class="header">
+        <div class="ticker">
+          <span class="ticker__span1">Бегущая строка Бегущая строка Бегущая строка </span>
+          <span class="ticker__span2">Бегущая строка Бегущая строка Бегущая строка </span>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="first-screen" id="firstScreen">
+          <div class="controls-top">
+            <button class="controls-top__button controls-top__button_auth"></button>
+            <button class="controls-top__button controls-top__button_refresh">3</button>
+          </div>
+
+          <div class="first-screen__buttons">
+            <button
+              class="first-screen__button first-screen__button_compatibility"
+              data-target="compatibility"
+            >
+              Совместимость
+            </button>
+
+            <button
+              class="first-screen__button first-screen__button_horoscope"
+              data-target="horoscope"
+            >
+              Гороскоп
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

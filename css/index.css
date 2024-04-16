@@ -1,0 +1,219 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+html {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  overflow-y: scroll;
+  color: #ffffff;
+  background-color: #1e1e1e;
+}
+
+a,
+button,
+input,
+textarea {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+@keyframes marquee1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes marquee2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+.ticker {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  overflow-x: hidden;
+}
+.ticker > span {
+  display: inline-block;
+  padding: 0 4px;
+  font-weight: 500;
+  font-size: 14px;
+  white-space: nowrap;
+  color: #fff;
+}
+.ticker__span1 {
+  animation: marquee1 20s infinite linear;
+  animation-delay: -20s;
+}
+.ticker__span2 {
+  animation: marquee2 20s infinite linear;
+  animation-delay: -10s;
+}
+.ticker > span:after {
+  content: "Бегущая строка Бегущая строка Бегущая строка ";
+}
+
+.app {
+  position: relative;
+  min-height: 100vh;
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background: url(../assets/app-bg.jpg) center no-repeat;
+  background-size: cover;
+  background-color: #1f1d2c;
+}
+
+.main > * {
+  min-height: calc(100vh - 40px);
+  padding: 37px 0 16px;
+  box-sizing: border-box;
+}
+
+.first-screen {
+  display: flex;
+  flex-direction: column;
+}
+.first-screen__buttons {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 14px;
+}
+.first-screen__button {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 17px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: #fff;
+  border: none;
+  border-radius: 48px;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  background: rgba(2, 5, 29, 0.5);
+  transition: transform ease-in-out 0.12s;
+  will-change: transform;
+  cursor: pointer;
+}
+.first-screen__button:hover {
+  transform: scale(1.015);
+}
+.first-screen__button:active {
+  transform: scale(1);
+}
+.first-screen__button::before {
+  content: "";
+  display: block;
+  height: 24px;
+  width: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.first-screen__button_compatibility::before {
+  background-image: url(../assets/compatibility.svg);
+}
+.first-screen__button_horoscope::before {
+  background-image: url(../assets/horoscope.svg);
+}
+
+.controls-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 20px;
+}
+.controls-top__button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 51px;
+  min-width: 51px;
+  padding: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 22px;
+  text-align: center;
+  border-radius: 48px;
+  border: none;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  background: url(../assets/round-button-bg.svg) center no-repeat;
+  background-size: contain;
+  transition: transform ease-in-out 0.12s;
+  will-change: transform;
+  cursor: pointer;
+}
+.controls-top__button:hover {
+  transform: scale(1.06);
+}
+.controls-top__button:active {
+  transform: scale(1);
+}
+.controls-top__button_auth:before {
+  content: "";
+  display: inline-block;
+  height: 21px;
+  width: 17px;
+  background: url(../assets/auth.svg) center no-repeat;
+  background-size: contain;
+}
+.controls-top__button_refresh {
+  width: 75px;
+  background-image: url(../assets/elipse-button-bg.svg);
+  background-size: contain;
+}
+.controls-top__button_refresh:before {
+  content: "";
+  display: inline-block;
+  height: 21px;
+  width: 21px;
+  background: url(../assets/refresh.svg) center no-repeat;
+  background-size: contain;
+}

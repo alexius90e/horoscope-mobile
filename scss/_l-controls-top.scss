@@ -1,0 +1,64 @@
+.controls-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 20px;
+
+  &__button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    height: 51px;
+    min-width: 51px;
+    padding: 0;
+    box-sizing: border-box;
+    color: $white;
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+    border-radius: 48px;
+    border: none;
+    backdrop-filter: blur(4px);
+    background: url(../assets/round-button-bg.svg) center no-repeat;
+    background-size: contain;
+    transition: transform ease-in-out 0.12s;
+    will-change: transform;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.06);
+    }
+
+    &:active {
+      transform: scale(1);
+    }
+
+    &_auth {
+      &:before {
+        content: '';
+        display: inline-block;
+        height: 21px;
+        width: 17px;
+        background: url(../assets/auth.svg) center no-repeat;
+        background-size: contain;
+      }
+    }
+
+    &_refresh {
+      width: 75px;
+      background-image: url(../assets/elipse-button-bg.svg);
+      background-size: contain;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        height: 21px;
+        width: 21px;
+        background: url(../assets/refresh.svg) center no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}
