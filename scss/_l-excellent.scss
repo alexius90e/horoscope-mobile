@@ -1,25 +1,25 @@
-@keyframes rotateForward {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes rotateBack {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
-}
-
 .excellent {
   display: flex;
   flex-direction: column;
   padding-top: 56px;
+
+  @keyframes rotateForward {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes rotateBack {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
 
   &__title {
     margin: 0 0 6px;
@@ -44,13 +44,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
     &-outter {
       width: 100%;
       aspect-ratio: 1 / 1;
       background: url(../assets/horo-outter.png) center no-repeat;
       background-size: contain;
-      animation: rotateForward 60s infinite linear;
+      animation: rotateForward 30s infinite linear;
     }
 
     &-inner {
@@ -59,7 +60,7 @@
       aspect-ratio: 1 / 1;
       background: url(../assets/horo-inner.png) center no-repeat;
       background-size: contain;
-      animation: rotateBack 60s infinite linear;
+      animation: rotateBack 30s infinite linear;
     }
   }
 
@@ -72,21 +73,22 @@
 
   &__button {
     display: inline-block;
-    padding: 14px 48px;
+    width: 168px;
+    height: 48px;
     font-weight: 600;
     font-size: 16px;
     line-height: 21px;
     color: #fff;
     border: none;
     border-radius: 48px;
-    backdrop-filter: blur(6px);
-    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    background: url(../assets/close-button-bg.png) center no-repeat;
     transition: transform ease-in-out 0.12s;
     will-change: transform;
     cursor: pointer;
 
     &:hover {
-      transform: scale(1.06);
+      transform: scale(1.02);
     }
 
     &:active {
