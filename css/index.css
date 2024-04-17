@@ -551,6 +551,42 @@ img {
 .profile__form-buttons .button:active {
   transform: rotate(180deg) scale(1);
 }
+.profile__form-sex {
+  display: flex;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 49px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.profile__form-sex-label {
+  display: block;
+  height: 49px;
+  width: 49px;
+  border-radius: 49px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 21px;
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color ease-in-out 0.12s;
+}
+.profile__form-sex-label:last-child {
+  margin-left: -4px;
+}
+.profile__form-sex-label_female {
+  background-image: url(../assets/female.svg);
+}
+.profile__form-sex-label_male {
+  background-image: url(../assets/male.svg);
+}
+.profile__form-sex-label-input {
+  opacity: 0;
+}
+.profile__form-sex-label:has(input:checked) {
+  background-color: #ffffff;
+}
 
 .referral__description {
   display: flex;

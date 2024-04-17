@@ -94,10 +94,51 @@
         &:hover {
           transform: rotate(180deg) scale(1.02);
         }
-      
+
         &:active {
           transform: rotate(180deg) scale(1);
         }
+      }
+    }
+
+    &-sex {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      border-radius: 49px;
+      backdrop-filter: blur(5px);
+      background-color: rgba(255, 255, 255, 0.1);
+
+      &-label {
+        display: block;
+        height: 49px;
+        width: 49px;
+        border-radius: 49px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 21px;
+        background-color: rgba($color: $white, $alpha: 0);
+        transition: background-color ease-in-out 0.12s;
+
+        &:last-child {
+          margin-left: -4px;
+        }
+
+        &_female {
+          background-image: url(../assets/female.svg);
+        }
+
+        &_male {
+          background-image: url(../assets/male.svg);
+        }
+
+        &-input {
+          opacity: 0;
+        }
+      }
+
+      &-label:has(input:checked) {
+        background-color: $white;
       }
     }
   }

@@ -21,12 +21,28 @@ if (referralLinkButton && referralLinkText) {
   });
 }
 
+const profileForm = document.querySelector('.profile__form');
+
+if (profileForm) {
+  profileForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const name = formData.get('name');
+    const city = formData.get('city');
+    const date = formData.get('date');
+    const time = formData.get('time');
+    const sex = formData.get('sex');
+    console.log(name, city, date, time, sex)
+  });
+}
+
 const compatibilityForm = document.querySelector('.compatibility__form');
 
-if (compatibilityForm)
+if (compatibilityForm) {
   compatibilityForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const excellentSection = document.getElementById('excellent');
     mainSections.forEach((section) => section.classList.add('hidden'));
     if (excellentSection) excellentSection.classList.remove('hidden');
   });
+}
