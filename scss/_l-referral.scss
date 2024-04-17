@@ -1,4 +1,10 @@
 .referral {
+  background: linear-gradient(
+    180deg,
+    rgba($color: #1e1c2b, $alpha: 0.8) 0%,
+    rgba($color: #1e1c2b, $alpha: 0.2) 100%
+  );
+
   &__description {
     display: flex;
     flex-direction: column;
@@ -28,6 +34,7 @@
     &-link {
       display: flex;
       align-items: center;
+      justify-content: space-around;
       gap: 10px;
       padding: 14px 16px;
       border-radius: 59px;
@@ -35,10 +42,13 @@
       background-color: rgba(2, 5, 29, 0.5);
 
       &-text {
+        max-width: calc(100% - 20px);
+        overflow: hidden;
         font-weight: 400;
         font-size: 15px;
         line-height: 130%;
         color: #fff;
+        text-overflow: ellipsis;
       }
 
       &-button {

@@ -1,4 +1,10 @@
 .compatibility {
+  background: linear-gradient(
+    180deg,
+    rgba($color: #1e1c2b, $alpha: 0.8) 0%,
+    rgba($color: #1e1c2b, $alpha: 0.2) 100%
+  );
+
   &__form {
     flex: 1 1 auto;
     display: flex;
