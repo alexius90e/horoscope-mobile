@@ -121,7 +121,7 @@
           </div>
         </section>
 
-        <section class="profile" id="profile">
+        <section class="profile hidden" id="profile">
           <div class="controls-top">
             <button
               class="controls-top__button controls-top__button_close nav-button"
@@ -138,19 +138,19 @@
 
           <form class="profile__form">
             <fieldset class="profile__form-info">
-              <input class="input" type="text" placeholder="ФИО" required />
-              <input class="input" type="text" placeholder="Город" required />
+              <input class="input" type="text" name="name" placeholder="ФИО" required />
+              <input class="input" type="text" name="city" placeholder="Город" required />
             </fieldset>
 
             <fieldset class="profile__form-time">
               <label>
                 <span>Дата рождения</span>
-                <input class="input" type="date" required />
+                <input class="input" type="date" name="date" required />
               </label>
 
               <label>
                 <span>Время рождения</span>
-                <input class="input" type="time" required />
+                <input class="input" type="time" name="time" required />
               </label>
             </fieldset>
 
@@ -170,15 +170,83 @@
           </div>
 
           <div class="referral__description">
-            <p>
+            <p class="referral__description-text">
               Описание работы реферальной системы, что, как, зачем. Описание работы реферальной
               системы, что, как, зачем.
             </p>
-            <p>
+            <p class="referral__description-text">
               Описание работы реферальной системы, что, как, зачем. Описание работы реферальной
               системы, что, как, зачем.
             </p>
           </div>
+
+          <div class="referral__main">
+            <div class="referral__main-title">Ваша реферальная ссылка</div>
+            <div class="referral__main-link">
+              <span class="referral__main-link-text">https://kwork.ru/user/maksimleznin30</span>
+              <button class="referral__main-link-button"></button>
+            </div>
+          </div>
+        </section>
+
+        <section class="compatibility" id="compatibilityForm">
+          <div class="controls-top">
+            <button
+              class="controls-top__button controls-top__button_close nav-button"
+              data-target="firstScreen"
+            ></button>
+            <button class="controls-top__button controls-top__button_refresh nav-button">3</button>
+          </div>
+
+          <form class="compatibility__form">
+            <fieldset class="compatibility__form-title">Вы</fieldset>
+
+            <fieldset class="compatibility__form-name profile__form-name_female">
+              <input class="input" type="text" name="nameFemale" placeholder="ФИО" required />
+            </fieldset>
+
+            <fieldset class="compatibility__form-city">
+              <input class="input" type="text" name="cityFemale" placeholder="Город" required />
+            </fieldset>
+
+            <fieldset class="compatibility__form-time">
+              <label>
+                <span>Дата рождения</span>
+                <input class="input" type="date" name="dateFemale" required />
+              </label>
+
+              <label>
+                <span>Время рождения</span>
+                <input class="input" type="time" name="timeFemale" required />
+              </label>
+            </fieldset>
+
+            <fieldset class="compatibility__form-title">Вторая половинка</fieldset>
+
+            <fieldset class="compatibility__form-name profile__form-name_male">
+              <input class="input" type="text" name="nameMale" placeholder="ФИО" required />
+            </fieldset>
+
+            <fieldset class="compatibility__form-city">
+              <input class="input" type="text" name="cityMale" placeholder="Город" required />
+            </fieldset>
+
+            <fieldset class="compatibility__form-time">
+              <label>
+                <span>Дата рождения</span>
+                <input class="input" type="date" name="dateMale" required />
+              </label>
+
+              <label>
+                <span>Время рождения</span>
+                <input class="input" type="time" name="timeMale" required />
+              </label>
+            </fieldset>
+
+            <fieldset class="profile__form-buttons">
+              <button class="button">Получить</button>
+            </fieldset>
+          </form>
         </section>
 
         <section class="excellent hidden" id="excellent">

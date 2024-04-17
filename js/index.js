@@ -11,3 +11,12 @@ navButtons.forEach((navButton) => {
     }
   });
 });
+
+const referralLinkText = document.querySelector('.referral__main-link-text');
+const referralLinkButton = document.querySelector('.referral__main-link-button');
+
+if (referralLinkButton && referralLinkText) {
+  referralLinkButton.addEventListener('click', () => {
+    navigator.clipboard.writeText(referralLinkText.innerText);
+  });
+}
