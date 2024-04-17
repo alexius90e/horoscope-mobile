@@ -60,5 +60,16 @@
         background-size: contain;
       }
     }
+
+    &_close {
+      &:before {
+        content: '';
+        display: inline-block;
+        height: 23px;
+        width: 23px;
+        background: url(../assets/close.svg) center no-repeat;
+        background-size: contain;
+      }
+    }
   }
 }

@@ -1,0 +1,90 @@
+.service-info {
+  &__content {
+    overflow: hidden;
+    border: 2px solid rgba($color: $white, $alpha: 0.25);
+    border-radius: 35px;
+    backdrop-filter: blur(8px);
+    background-color: rgba(2, 5, 29, 0.5);
+
+    &-title {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 18px 20px;
+      margin: 0;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 130%;
+      color: #fff;
+      background: url(../assets/content-title-bg.png) center no-repeat;
+      background-size: cover;
+      background-color: rgba($color: #1e1e2b, $alpha: 0.6);
+
+      &::before {
+        content: '';
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      &_compatibility {
+        &::before {
+          background-image: url(../assets/compatibility.svg);
+        }
+      }
+
+      &_horoscope {
+        &::before {
+          background-image: url(../assets/horoscope.svg);
+        }
+      }
+    }
+
+    &-main {
+      padding: 20px;
+    }
+  }
+
+  &__text {
+    margin: 0 0 10px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 130%;
+    color: #fff;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 0 10px;
+    padding: 0;
+    list-style-type: none;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 130%;
+    color: #fff;
+    opacity: 0.8;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px 20px;
+    margin: 20px 0 0;
+    flex-wrap: wrap;
+
+    & .button {
+      flex: 1 1 auto;
+      padding: 10px 30px 11px;
+
+      &_secondary {
+        padding: 10px 20px 11px;
+      }
+    }
+  }
+}

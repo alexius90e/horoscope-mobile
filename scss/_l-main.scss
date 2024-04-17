@@ -1,7 +1,7 @@
 .main {
   & > * {
-    min-height: calc(100vh - 40px);
-    padding: 37px 0 16px;
+    min-height: 100vh;
+    padding: 57px 20px 36px;
     box-sizing: border-box;
   }
 }

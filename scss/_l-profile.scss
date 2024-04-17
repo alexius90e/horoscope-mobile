@@ -1,0 +1,104 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+
+  &__referral {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+
+    &-button {
+      display: inline-block;
+      width: 275px;
+      height: 46px;
+      padding: 0;
+      box-sizing: border-box;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 130%;
+      color: #fff;
+      border: none;
+      border-radius: 48px;
+      background: url(../assets/referral-button-bg.svg) center no-repeat;
+      background-size: contain;
+      transition: transform ease-in-out 0.12s;
+      will-change: transform;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.015);
+      }
+
+      &:active {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &__form {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    & fieldset {
+      padding: 0;
+      margin: 0;
+      border: none;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    &-time {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+
+      & > * {
+        flex: 1 1 160px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        & > span {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 130%;
+          color: rgba(255, 255, 255, 0.8);
+        }
+      }
+
+      & input {
+        width: 100%;
+      }
+    }
+
+    &-buttons {
+      flex: 1 1 auto;
+      display: flex;
+      justify-content: center;
+      transform: rotate(180deg);
+
+      & .button {
+        display: inline-block;
+        height: 45px;
+        padding: 11px 48px;
+        transform: rotate(180deg);
+
+        &:hover {
+          transform: rotate(180deg) scale(1.02);
+        }
+      
+        &:active {
+          transform: rotate(180deg) scale(1);
+        }
+      }
+    }
+  }
+}

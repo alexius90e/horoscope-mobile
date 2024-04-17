@@ -1,0 +1,29 @@
+.button {
+  display: inline-block;
+  padding: 10px 40px 11px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 130%;
+  text-align: center;
+  color: $white;
+  border: 1px solid #7042f3;
+  border-radius: 48px;
+  background-color: #7042f3;
+  transition: transform ease-in-out 0.12s;
+  will-change: transform;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  &:active {
+    transform: scale(1);
+  }
+
+  &_secondary {
+    padding: 11px 20px;
+    border-color: $white;
+    background-color: rgba($color: $white, $alpha: 0);
+  }
+}

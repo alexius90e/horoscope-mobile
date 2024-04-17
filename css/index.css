@@ -89,12 +89,82 @@ img {
   content: "Бегущая строка Бегущая строка Бегущая строка ";
 }
 
+.button {
+  display: inline-block;
+  padding: 10px 40px 11px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 130%;
+  text-align: center;
+  color: #ffffff;
+  border: 1px solid #7042f3;
+  border-radius: 48px;
+  background-color: #7042f3;
+  transition: transform ease-in-out 0.12s;
+  will-change: transform;
+  cursor: pointer;
+}
+.button:hover {
+  transform: scale(1.02);
+}
+.button:active {
+  transform: scale(1);
+}
+.button_secondary {
+  padding: 11px 20px;
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.input {
+  position: relative;
+  display: block;
+  padding: 14px 20px;
+  box-sizing: border-box;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  color: #ffffff;
+  border: none;
+  border-radius: 48px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.1);
+  outline: none;
+}
+.input::-moz-placeholder {
+  color: #808080;
+}
+.input::placeholder {
+  color: #808080;
+}
+.input[type=date]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  height: 20px;
+  width: 20px;
+  transform: translateY(-50%);
+  filter: invert(100%);
+  cursor: pointer;
+}
+.input[type=time]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  height: 20px;
+  width: 20px;
+  transform: translateY(-50%);
+  filter: invert(100%);
+  cursor: pointer;
+}
+
 .app {
   position: relative;
   min-height: 100vh;
   max-width: 440px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0;
   box-sizing: border-box;
   background: url(../assets/app-bg.jpg) center no-repeat;
   background-size: cover;
@@ -102,8 +172,8 @@ img {
 }
 
 .main > * {
-  min-height: calc(100vh - 40px);
-  padding: 37px 0 16px;
+  min-height: 100vh;
+  padding: 57px 20px 36px;
   box-sizing: border-box;
 }
 
@@ -217,6 +287,14 @@ img {
   background: url(../assets/refresh.svg) center no-repeat;
   background-size: contain;
 }
+.controls-top__button_close:before {
+  content: "";
+  display: inline-block;
+  height: 23px;
+  width: 23px;
+  background: url(../assets/close.svg) center no-repeat;
+  background-size: contain;
+}
 
 .excellent {
   display: flex;
@@ -305,4 +383,170 @@ img {
 }
 .excellent__button:active {
   transform: scale(1);
+}
+
+.service-info__content {
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 35px;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  background-color: rgba(2, 5, 29, 0.5);
+}
+.service-info__content-title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 20px;
+  margin: 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+  color: #fff;
+  background: url(../assets/content-title-bg.png) center no-repeat;
+  background-size: cover;
+  background-color: rgba(30, 30, 43, 0.6);
+}
+.service-info__content-title::before {
+  content: "";
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.service-info__content-title_compatibility::before {
+  background-image: url(../assets/compatibility.svg);
+}
+.service-info__content-title_horoscope::before {
+  background-image: url(../assets/horoscope.svg);
+}
+.service-info__content-main {
+  padding: 20px;
+}
+.service-info__text {
+  margin: 0 0 10px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 130%;
+  color: #fff;
+}
+.service-info__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 0 10px;
+  padding: 0;
+  list-style-type: none;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 130%;
+  color: #fff;
+  opacity: 0.8;
+}
+.service-info__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 20px;
+  margin: 20px 0 0;
+  flex-wrap: wrap;
+}
+.service-info__buttons .button {
+  flex: 1 1 auto;
+  padding: 10px 30px 11px;
+}
+.service-info__buttons .button_secondary {
+  padding: 10px 20px 11px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+}
+.profile__referral {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+.profile__referral-button {
+  display: inline-block;
+  width: 275px;
+  height: 46px;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 130%;
+  color: #fff;
+  border: none;
+  border-radius: 48px;
+  background: url(../assets/referral-button-bg.svg) center no-repeat;
+  background-size: contain;
+  transition: transform ease-in-out 0.12s;
+  will-change: transform;
+  cursor: pointer;
+}
+.profile__referral-button:hover {
+  transform: scale(1.015);
+}
+.profile__referral-button:active {
+  transform: scale(1);
+}
+.profile__form {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.profile__form fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.profile__form-info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.profile__form-time {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.profile__form-time > * {
+  flex: 1 1 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.profile__form-time > * > span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: rgba(255, 255, 255, 0.8);
+}
+.profile__form-time input {
+  width: 100%;
+}
+.profile__form-buttons {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+}
+.profile__form-buttons .button {
+  display: inline-block;
+  height: 45px;
+  padding: 11px 48px;
+  transform: rotate(180deg);
+}
+.profile__form-buttons .button:hover {
+  transform: rotate(180deg) scale(1.02);
+}
+.profile__form-buttons .button:active {
+  transform: rotate(180deg) scale(1);
 }
