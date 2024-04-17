@@ -1,3 +1,89 @@
 .compatibility {
-  
+  &__form {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    & > fieldset {
+      padding: 0;
+      margin: 0;
+      border: none;
+    }
+
+    &-title {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 130%;
+      text-align: center;
+      color: #fff;
+
+      &_last {
+        margin-top: 16px !important;
+      }
+    }
+
+    &-name {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+
+      &::after {
+        content: '';
+        flex: 0 0 auto;
+        display: block;
+        width: 49px;
+        height: 49px;
+        border-radius: 49px;
+        background-color: $white;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 21px;
+      }
+
+      &_female {
+        &::after {
+          background-image: url(../assets/female.svg);
+        }
+      }
+
+      &_male {
+        &::after {
+          background-image: url(../assets/male.svg);
+        }
+      }
+    }
+
+    &-time {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+
+      & > * {
+        flex: 1 1 160px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        & > span {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 130%;
+          color: rgba(255, 255, 255, 0.8);
+        }
+      }
+    }
+
+    &-buttons {
+      flex: 1 1 auto;
+      display: flex;
+      justify-content: center;
+      margin-top: 16px !important;
+
+      & .button {
+        padding: 11px 48px;
+      }
+    }
+  }
 }

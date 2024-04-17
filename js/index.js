@@ -20,3 +20,13 @@ if (referralLinkButton && referralLinkText) {
     navigator.clipboard.writeText(referralLinkText.innerText);
   });
 }
+
+const compatibilityForm = document.querySelector('.compatibility__form');
+
+if (compatibilityForm)
+  compatibilityForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const excellentSection = document.getElementById('excellent');
+    mainSections.forEach((section) => section.classList.add('hidden'));
+    if (excellentSection) excellentSection.classList.remove('hidden');
+  });
