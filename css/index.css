@@ -196,7 +196,7 @@ img {
 .controls-top__button:active {
   transform: scale(1);
 }
-.controls-top__button_auth:before {
+.controls-top__button_profile:before {
   content: "";
   display: inline-block;
   height: 21px;

@@ -21,20 +21,23 @@
       <main class="main">
         <section class="first-screen hidden" id="firstScreen">
           <div class="controls-top">
-            <button class="controls-top__button controls-top__button_auth"></button>
-            <button class="controls-top__button controls-top__button_refresh">3</button>
+            <button
+              class="controls-top__button controls-top__button_profile nav-button"
+              data-target="profile"
+            ></button>
+            <button class="controls-top__button controls-top__button_refresh nav-button">3</button>
           </div>
 
           <div class="first-screen__buttons">
             <button
-              class="first-screen__button first-screen__button_compatibility"
+              class="first-screen__button first-screen__button_compatibility nav-button"
               data-target="compatibility"
             >
               Совместимость
             </button>
 
             <button
-              class="first-screen__button first-screen__button_horoscope"
+              class="first-screen__button first-screen__button_horoscope nav-button"
               data-target="horoscope"
             >
               Гороскоп
@@ -42,7 +45,7 @@
           </div>
         </section>
 
-        <section class="excellent">
+        <section class="excellent" id="excellent">
           <h3 class="excellent__title">Отлично!</h3>
           <p class="excellent__description">Ваш запрос обрабатывается</p>
           <div class="excellent__horoscope">
@@ -50,7 +53,7 @@
             <div class="excellent__horoscope-inner"></div>
           </div>
           <div class="excellent__buttons">
-            <button class="excellent__button">Закрыть</button>
+            <button class="excellent__button nav-button" data-target="firstScreen">Закрыть</button>
           </div>
         </section>
       </main>
