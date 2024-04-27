@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Horoscope</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="./css/index.css" />
     <script type="module" src="./js/index.js" defer></script>
   </head>
@@ -19,7 +23,7 @@
       </header>
 
       <main class="main">
-        <section class="first-screen " id="firstScreen">
+        <section class="first-screen" id="firstScreen">
           <div class="controls-top">
             <button
               class="controls-top__button controls-top__button_profile nav-button"
@@ -30,45 +34,36 @@
 
           <div class="first-screen__buttons">
             <button
-              class="first-screen__button first-screen__button_compatibility nav-button"
-              data-target="compatibility"
-            >
-              Совместимость
-            </button>
-
-            <button
-              class="first-screen__button first-screen__button_horoscope nav-button"
+              class="first-screen__button first-screen__button_horoscope nav-button animate__animated animate__fadeInUp"
               data-target="horoscope"
             >
               Гороскоп
             </button>
 
             <button
-              class="first-screen__button first-screen__button_compatibility nav-button"
+              class="first-screen__button first-screen__button_namehoroscope nav-button animate__animated animate__fadeInUp"
+              data-target="horoscopeName"
+            >
+              Именной Гороскоп
+            </button>
+
+            <button
+              class="first-screen__button first-screen__button_compatibility nav-button animate__animated animate__fadeInUp"
               data-target="compatibility"
             >
               Совместимость
             </button>
 
             <button
-              class="first-screen__button first-screen__button_horoscope nav-button"
-              data-target="horoscope"
+              class="first-screen__button first-screen__button_referral nav-button animate__animated animate__fadeInUp"
+              data-target="referral"
             >
-              Гороскоп
+              Реферальная система
             </button>
-
-            <button
-              class="first-screen__button first-screen__button_compatibility nav-button"
-              data-target="compatibility"
-            >
-              Совместимость
-            </button>
-
-
           </div>
         </section>
 
-        <section class="profile hidden" id="profile">
+        <section class="profile hidden " id="profile">
           <div class="controls-top">
             <button
               class="controls-top__button controls-top__button_close nav-button"
@@ -77,13 +72,9 @@
             <button class="controls-top__button controls-top__button_refresh nav-button">3</button>
           </div>
 
-          <div class="profile__referral">
-            <button class="profile__referral-button nav-button" data-target="referral">
-              Реферальная система
-            </button>
-          </div>
+          <h2 class="profile__title animate__animated animate__slideInDown">Личный кабинет</h2>
 
-          <form class="profile__form">
+          <form class="profile__form animate__animated animate__fadeInUp">
             <fieldset class="profile__form-info">
               <input class="input" type="text" name="name" placeholder="ФИО" />
               <input class="input" type="text" name="city" placeholder="Город" />
@@ -141,6 +132,44 @@
 
           <div class="service-info__content">
             <h2 class="service-info__content-title service-info__content-title_horoscope">
+              Гороскоп
+            </h2>
+
+            <div class="service-info__content-main">
+              <p class="service-info__text">Раскрой свой потенциал с именным гороскопом</p>
+
+              <ul class="service-info__list">
+                <li>1 - 📝 Заполни простую форму заказа.</li>
+                <li>2 - 🌟 Получи персональный гороскоп на почту или в мессенджер.</li>
+                <li>3 - 🚀 Применяй советы для достижения успеха.</li>
+                <li>4 - 🔍 Открой дверь к самопознанию.</li>
+              </ul>
+
+              <p class="service-info__text">
+                ✨ Закажи сейчас и начни путь к своему лучшему будущему!
+              </p>
+
+              <div class="service-info__buttons">
+                <button class="button button_secondary nav-button" data-target="firstScreen">
+                  Закрыть
+                </button>
+                <button class="button nav-button" data-target="horoscopeForm">Получить</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="service-info hidden" id="horoscopeName">
+          <div class="controls-top">
+            <button
+              class="controls-top__button controls-top__button_profile nav-button"
+              data-target="profile"
+            ></button>
+            <button class="controls-top__button controls-top__button_refresh nav-button">3</button>
+          </div>
+
+          <div class="service-info__content">
+            <h2 class="service-info__content-title service-info__content-title_horoscope">
               Именной гороскоп
             </h2>
 
@@ -162,7 +191,7 @@
                 <button class="button button_secondary nav-button" data-target="firstScreen">
                   Закрыть
                 </button>
-                <button class="button nav-button" data-target="compatibilityForm">Получить</button>
+                <button class="button nav-button" data-target="horoscopeForm">Получить</button>
               </div>
             </div>
           </div>
@@ -210,7 +239,7 @@
           <div class="controls-top">
             <button
               class="controls-top__button controls-top__button_close nav-button"
-              data-target="profile"
+              data-target="firstScreen"
             ></button>
             <button class="controls-top__button controls-top__button_refresh nav-button">3</button>
           </div>
@@ -233,6 +262,50 @@
               <button class="referral__main-link-button"></button>
             </div>
           </div>
+        </section>
+
+        <section class="horoscope hidden" id="horoscopeForm">
+          <div class="controls-top">
+            <button
+              class="controls-top__button controls-top__button_close nav-button"
+              data-target="firstScreen"
+            ></button>
+            <button class="controls-top__button controls-top__button_refresh nav-button">3</button>
+          </div>
+
+          <form class="horoscope__form">
+            <fieldset class="horoscope__form-title">Что вы хотите узнать?</fieldset>
+
+            <fieldset class="horoscope__form-subject">
+              <input class="input" type="text" name="subject" placeholder="ФИО" />
+            </fieldset>
+
+            <fieldset class="horoscope__form-title">Вы</fieldset>
+
+            <fieldset class="horoscope__form-name">
+              <input class="input" type="text" name="name" placeholder="ФИО" />
+            </fieldset>
+
+            <fieldset class="horoscope__form-city">
+              <input class="input" type="text" name="city" placeholder="Город" />
+            </fieldset>
+
+            <fieldset class="horoscope__form-time">
+              <label>
+                <span>Дата рождения</span>
+                <input class="input" type="date" name="date" />
+              </label>
+
+              <label>
+                <span>Время рождения</span>
+                <input class="input" type="time" name="time" />
+              </label>
+            </fieldset>
+
+            <fieldset class="horoscope__form-buttons">
+              <button class="button">Получить</button>
+            </fieldset>
+          </form>
         </section>
 
         <section class="compatibility hidden" id="compatibilityForm">

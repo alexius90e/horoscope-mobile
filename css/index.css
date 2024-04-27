@@ -196,16 +196,14 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 10px;
-  padding: 16px 12px;
+  padding: 16px 8px;
   width: 100%;
   box-sizing: border-box;
   font-weight: 600;
   font-size: 14px;
   line-height: 18px;
   color: #fff;
-  word-break: break-all;
   border: none;
   border-radius: 20px;
   -webkit-backdrop-filter: blur(8px);
@@ -214,6 +212,11 @@ img {
   transition: transform ease-in-out 0.12s;
   will-change: transform;
   cursor: pointer;
+}
+@media (max-width: 360px) {
+  .first-screen__button {
+    flex: 0 0 calc(50% - 7px);
+  }
 }
 .first-screen__button:hover {
   transform: scale(1.015);
@@ -230,11 +233,23 @@ img {
   background-position: center;
   background-size: contain;
 }
+.first-screen__button_compatibility {
+  word-break: break-all;
+}
 .first-screen__button_compatibility::before {
   background-image: url(../assets/compatibility.svg);
 }
 .first-screen__button_horoscope::before {
   background-image: url(../assets/horoscope.svg);
+}
+.first-screen__button_namehoroscope::before {
+  background-image: url(../assets/name-horoscope.svg);
+}
+.first-screen__button_referral {
+  word-break: break-all;
+}
+.first-screen__button_referral::before {
+  background-image: url(../assets/referral.svg);
 }
 
 .controls-top {
@@ -473,13 +488,25 @@ img {
   flex-direction: column;
   background: linear-gradient(180deg, rgba(30, 28, 43, 0.8) 0%, rgba(30, 28, 43, 0.2) 100%);
 }
-.profile__referral {
+.profile__title {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px 0;
+  margin: 20px auto;
+  width: 275px;
+  height: 46px;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 130%;
+  color: #fff;
+  border: none;
+  border-radius: 48px;
+  background: url(../assets/referral-button-bg.svg) center no-repeat;
+  background-size: contain;
 }
-.profile__referral-button {
+.profile__title-button {
   display: inline-block;
   width: 275px;
   height: 46px;
@@ -497,10 +524,10 @@ img {
   will-change: transform;
   cursor: pointer;
 }
-.profile__referral-button:hover {
+.profile__title-button:hover {
   transform: scale(1.015);
 }
-.profile__referral-button:active {
+.profile__title-button:active {
   transform: scale(1);
 }
 .profile__form {
@@ -723,5 +750,62 @@ img {
   margin-top: 16px !important;
 }
 .compatibility__form-buttons .button {
+  padding: 11px 48px;
+}
+
+.horoscope {
+  background: linear-gradient(180deg, rgba(30, 28, 43, 0.8) 0%, rgba(30, 28, 43, 0.2) 100%);
+}
+.horoscope__form {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.horoscope__form > fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.horoscope__form-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: center;
+  color: #fff;
+}
+.horoscope__form-title_last {
+  margin-top: 16px !important;
+}
+.horoscope__form-name {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.horoscope__form-time {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.horoscope__form-time > * {
+  flex: 1 1 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.horoscope__form-time > * > span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: rgba(255, 255, 255, 0.8);
+}
+.horoscope__form-buttons {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 16px !important;
+}
+.horoscope__form-buttons .button {
   padding: 11px 48px;
 }

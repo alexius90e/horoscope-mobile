@@ -7,11 +7,23 @@
     rgba($color: #1e1c2b, $alpha: 0.2) 100%
   );
 
-  &__referral {
+  &__title {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px 0;
+    margin: 20px auto;
+    width: 275px;
+    height: 46px;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 130%;
+    color: #fff;
+    border: none;
+    border-radius: 48px;
+    background: url(../assets/referral-button-bg.svg) center no-repeat;
+    background-size: contain;
 
     &-button {
       display: inline-block;
