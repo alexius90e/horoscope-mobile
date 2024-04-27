@@ -23,7 +23,7 @@
       </header>
 
       <main class="main">
-        <section class="first-screen" id="firstScreen">
+        <section class="first-screen " id="firstScreen">
           <div class="controls-top">
             <button
               class="controls-top__button controls-top__button_profile nav-button"
@@ -63,7 +63,7 @@
           </div>
         </section>
 
-        <section class="profile hidden " id="profile">
+        <section class="profile hidden" id="profile">
           <div class="controls-top">
             <button
               class="controls-top__button controls-top__button_close nav-button"
@@ -277,7 +277,13 @@
             <fieldset class="horoscope__form-title">Что вы хотите узнать?</fieldset>
 
             <fieldset class="horoscope__form-subject">
-              <input class="input" type="text" name="subject" placeholder="ФИО" />
+              <div class="custom-select" data-value="1">
+                <select class="form-select" name="subject" data-value="1">
+                  <option value="1">Любовь</option>
+                  <option value="2">Измена</option>
+                  <option value="3">Бизнес</option>
+                </select>
+              </div>
             </fieldset>
 
             <fieldset class="horoscope__form-title">Вы</fieldset>

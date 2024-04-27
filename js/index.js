@@ -1,3 +1,5 @@
+import './custom-select.js'
+
 const navButtons = document.querySelectorAll('.nav-button');
 const mainSections = document.querySelectorAll('.main section');
 
@@ -46,3 +48,14 @@ if (compatibilityForm) {
     if (excellentSection) excellentSection.classList.remove('hidden');
   });
 }
+
+const horoscopeForms = document.querySelectorAll('.horoscope__form');
+
+horoscopeForms.forEach(horoscopeForm => {
+  horoscopeForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const excellentSection = document.getElementById('excellent');
+    mainSections.forEach((section) => section.classList.add('hidden'));
+    if (excellentSection) excellentSection.classList.remove('hidden');
+  });
+})
