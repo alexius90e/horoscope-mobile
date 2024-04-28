@@ -7,6 +7,7 @@
     rgba($color: #1e1c2b, $alpha: 0.2) 100%
   );
 
+
   &__title {
     display: flex;
     align-items: center;
@@ -24,6 +25,8 @@
     border-radius: 48px;
     background: url(../assets/referral-button-bg.svg) center no-repeat;
     background-size: contain;
+    animation: fadeIn;
+    animation-duration: 1.2s;
 
     &-button {
       display: inline-block;
@@ -58,6 +61,8 @@
     display: flex;
     flex-direction: column;
     gap: 14px;
+    animation: fadeIn;
+    animation-duration: 1.2s;
 
     & fieldset {
       padding: 0;

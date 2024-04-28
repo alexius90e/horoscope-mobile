@@ -23,7 +23,7 @@
       </header>
 
       <main class="main">
-        <section class="first-screen " id="firstScreen">
+        <section class="first-screen hidden" id="firstScreen">
           <div class="controls-top">
             <button
               class="controls-top__button controls-top__button_profile nav-button"
@@ -34,28 +34,28 @@
 
           <div class="first-screen__buttons">
             <button
-              class="first-screen__button first-screen__button_horoscope nav-button animate__animated animate__fadeInUp"
+              class="first-screen__button first-screen__button_horoscope nav-button"
               data-target="horoscope"
             >
               Гороскоп
             </button>
 
             <button
-              class="first-screen__button first-screen__button_namehoroscope nav-button animate__animated animate__fadeInUp"
+              class="first-screen__button first-screen__button_namehoroscope nav-button"
               data-target="horoscopeName"
             >
               Именной Гороскоп
             </button>
 
             <button
-              class="first-screen__button first-screen__button_compatibility nav-button animate__animated animate__fadeInUp"
+              class="first-screen__button first-screen__button_compatibility nav-button"
               data-target="compatibility"
             >
               Совместимость
             </button>
 
             <button
-              class="first-screen__button first-screen__button_referral nav-button animate__animated animate__fadeInUp"
+              class="first-screen__button first-screen__button_referral nav-button"
               data-target="referral"
             >
               Реферальная система
@@ -72,9 +72,9 @@
             <button class="controls-top__button controls-top__button_refresh nav-button">3</button>
           </div>
 
-          <h2 class="profile__title animate__animated animate__slideInDown">Личный кабинет</h2>
+          <h2 class="profile__title">Личный кабинет</h2>
 
-          <form class="profile__form animate__animated animate__fadeInUp">
+          <form class="profile__form">
             <fieldset class="profile__form-info">
               <input class="input" type="text" name="name" placeholder="ФИО" />
               <input class="input" type="text" name="city" placeholder="Город" />
@@ -191,7 +191,7 @@
                 <button class="button button_secondary nav-button" data-target="firstScreen">
                   Закрыть
                 </button>
-                <button class="button nav-button" data-target="horoscopeForm">Получить</button>
+                <button class="button nav-button" data-target="horoscopeNameForm">Получить</button>
               </div>
             </div>
           </div>
@@ -264,7 +264,53 @@
           </div>
         </section>
 
-        <section class="horoscope hidden" id="horoscopeForm">
+        <section class="horoscope " id="horoscopeForm">
+          <div class="controls-top">
+            <button
+              class="controls-top__button controls-top__button_close nav-button"
+              data-target="firstScreen"
+            ></button>
+            <button class="controls-top__button controls-top__button_refresh nav-button">3</button>
+          </div>
+
+          <form class="horoscope__form">
+            <fieldset class="horoscope__form-title">Знак зодиака</fieldset>
+
+            <fieldset class="horoscope__form-subject">
+              <div class="custom-select" data-value="aries">
+                <select class="form-select" name="subject" data-value="aries">
+                  <option value="aries">Овен</option>
+                  <option value="taurus">Телец</option>
+                  <option value="Gemini">Близнецы</option>
+                  <option value="cancer">Рак</option>
+                  <option value="leo">Лев</option>
+                  <option value="virgo">Дева</option>
+                  <option value="libra">Весы</option>
+                  <option value="scorpio">Скорпион</option>
+                  <option value="sagittarius">Стрелец</option>
+                  <option value="capricorn">Козерог</option>
+                  <option value="aquarius">Водолей</option>
+                  <option value="pisces">Рыбы</option>
+                </select>
+              </div>
+            </fieldset>
+
+            <fieldset class="horoscope__form-title">Дата</fieldset>
+
+
+            <fieldset class="horoscope__form-time">
+              <label>
+                <input class="input" type="date" name="date" />
+              </label>
+            </fieldset>
+
+            <fieldset class="horoscope__form-buttons">
+              <button class="button">Получить</button>
+            </fieldset>
+          </form>
+        </section>
+
+        <section class="horoscope hidden" id="horoscopeNameForm">
           <div class="controls-top">
             <button
               class="controls-top__button controls-top__button_close nav-button"
@@ -324,6 +370,18 @@
           </div>
 
           <form class="compatibility__form">
+            <fieldset class="compatibility__form-title">Что вы хотите узнать?</fieldset>
+
+            <fieldset class="compatibility__form-subject">
+              <div class="custom-select" data-value="1">
+                <select class="form-select" name="subject" data-value="1">
+                  <option value="1">Любовь</option>
+                  <option value="2">Измена</option>
+                  <option value="3">Бизнес</option>
+                </select>
+              </div>
+            </fieldset>
+
             <fieldset class="compatibility__form-title">Вы</fieldset>
 
             <fieldset class="compatibility__form-name compatibility__form-name_female">

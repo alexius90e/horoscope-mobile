@@ -240,16 +240,11 @@ img {
   background-color: rgba(255, 255, 255, 0.2);
 }
 .custom-select .select-items::-webkit-scrollbar {
-  width: 6px;
-  height: 8px;
-  background-color: #90afb2;
+  width: 4px;
 }
 .custom-select .select-items::-webkit-scrollbar-thumb {
-  background-color: #90afb2;
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 4px;
-}
-.custom-select .select-items::-webkit-scrollbar-thumb:hover {
-  background-color: #90afb2;
 }
 .custom-select .select-items .same-as-selected {
   font-weight: 600;
@@ -325,6 +320,8 @@ img {
   background: rgba(2, 5, 29, 0.5);
   transition: transform ease-in-out 0.12s;
   will-change: transform;
+  animation: fadeIn;
+  animation-duration: 1.2s;
   cursor: pointer;
 }
 @media (max-width: 360px) {
@@ -619,6 +616,8 @@ img {
   border-radius: 48px;
   background: url(../assets/referral-button-bg.svg) center no-repeat;
   background-size: contain;
+  animation: fadeIn;
+  animation-duration: 1.2s;
 }
 .profile__title-button {
   display: inline-block;
@@ -649,6 +648,8 @@ img {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  animation: fadeIn;
+  animation-duration: 1.2s;
 }
 .profile__form fieldset {
   padding: 0;
