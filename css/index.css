@@ -924,3 +924,10 @@ img {
 .horoscope__form-buttons .button {
   padding: 11px 48px;
 }
+.horoscope#horoscopeForm .horoscope__form-time {
+  justify-content: center;
+}
+.horoscope#horoscopeForm .horoscope__form-time > * {
+  flex: 1 1 auto;
+  max-width: 280px;
+}

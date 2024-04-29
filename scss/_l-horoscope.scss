@@ -67,4 +67,13 @@
       }
     }
   }
+
+  &#horoscopeForm .horoscope__form-time {
+    justify-content: center;
+
+    & > * {
+      flex: 1 1 auto;
+      max-width: 280px;
+    }
+  }
 }
