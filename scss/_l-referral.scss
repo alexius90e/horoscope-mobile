@@ -10,6 +10,8 @@
     flex-direction: column;
     gap: 4px;
     margin: 50px 0 30px;
+    animation: $animationType;
+    animation-duration: $animationDuration;
 
     &-text {
       margin: 0;
@@ -22,6 +24,9 @@
   }
 
   &__main {
+    animation: $animationType;
+    animation-duration: $animationDuration;
+
     &-title {
       margin: 0 0 6px;
       font-weight: 400;

@@ -5,6 +5,8 @@
     border-radius: 35px;
     backdrop-filter: blur(8px);
     background-color: rgba(2, 5, 29, 0.5);
+    animation: $animationType;
+    animation-duration: $animationDuration;
 
     &-title {
       display: flex;

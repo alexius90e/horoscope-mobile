@@ -29,8 +29,8 @@
     background: rgba(2, 5, 29, 0.5);
     transition: transform ease-in-out 0.12s;
     will-change: transform;
-    animation: fadeIn;
-    animation-duration: 1.2s;
+    animation: $animationType;
+    animation-duration: $animationDuration;
     cursor: pointer;
 
     @include mobilesm {

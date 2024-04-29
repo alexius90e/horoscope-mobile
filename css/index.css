@@ -321,7 +321,7 @@ img {
   transition: transform ease-in-out 0.12s;
   will-change: transform;
   animation: fadeIn;
-  animation-duration: 1.2s;
+  animation-duration: 1s;
   cursor: pointer;
 }
 @media (max-width: 360px) {
@@ -457,6 +457,8 @@ img {
   line-height: 130%;
   text-align: center;
   color: #fff;
+  animation: fadeIn;
+  animation-duration: 1s;
 }
 .excellent__description {
   margin: 0 0 46px;
@@ -465,6 +467,8 @@ img {
   line-height: 130%;
   text-align: center;
   color: #fff;
+  animation: fadeIn;
+  animation-duration: 1s;
 }
 .excellent__horoscope {
   position: relative;
@@ -472,6 +476,8 @@ img {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  animation: fadeIn;
+  animation-duration: 2s;
 }
 .excellent__horoscope-outter {
   width: 100%;
@@ -493,6 +499,8 @@ img {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  animation: fadeIn;
+  animation-duration: 1s;
 }
 .excellent__button {
   display: inline-block;
@@ -525,6 +533,8 @@ img {
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
   background-color: rgba(2, 5, 29, 0.5);
+  animation: fadeIn;
+  animation-duration: 1s;
 }
 .service-info__content-title {
   display: flex;
@@ -617,7 +627,7 @@ img {
   background: url(../assets/referral-button-bg.svg) center no-repeat;
   background-size: contain;
   animation: fadeIn;
-  animation-duration: 1.2s;
+  animation-duration: 1s;
 }
 .profile__title-button {
   display: inline-block;
@@ -649,7 +659,7 @@ img {
   flex-direction: column;
   gap: 14px;
   animation: fadeIn;
-  animation-duration: 1.2s;
+  animation-duration: 1s;
 }
 .profile__form fieldset {
   padding: 0;
@@ -745,6 +755,8 @@ img {
   flex-direction: column;
   gap: 4px;
   margin: 50px 0 30px;
+  animation: fadeIn;
+  animation-duration: 1s;
 }
 .referral__description-text {
   margin: 0;
@@ -753,6 +765,10 @@ img {
   line-height: 130%;
   text-align: center;
   color: #fff;
+}
+.referral__main {
+  animation: fadeIn;
+  animation-duration: 1s;
 }
 .referral__main-title {
   margin: 0 0 6px;
@@ -801,6 +817,8 @@ img {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  animation: fadeIn;
+  animation-duration: 1s;
 }
 .compatibility__form > fieldset {
   padding: 0;
@@ -876,6 +894,8 @@ img {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  animation: fadeIn;
+  animation-duration: 1s;
 }
 .horoscope__form > fieldset {
   padding: 0;
